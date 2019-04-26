@@ -1,36 +1,5 @@
-<html><script id="allow-copy_script">(function agent() {
-    let isUnlockingCached = false
-    const isUnlocking = () => isUnlockingCached
-    document.addEventListener('allow_copy', event => {
-      const { unlock } = event.detail
-      isUnlockingCached = unlock
-    })
-
-    const copyEvents = [
-      'copy',
-      'cut',
-      'contextmenu',
-      'selectstart',
-      'mousedown',
-      'mouseup',
-      'mousemove',
-      'keydown',
-      'keypress',
-      'keyup',
-    ]
-    const rejectOtherHandlers = e => {
-      if (isUnlocking()) {
-        e.stopPropagation()
-        if (e.stopImmediatePropagation) e.stopImmediatePropagation()
-      }
-    }
-    copyEvents.forEach(evt => {
-      document.documentElement.addEventListener(evt, rejectOtherHandlers, {
-        capture: true,
-      })
-    })
-  })()</script><head>
-		<title>HACKED!</title>
+<html><head>
+		<title>0day!</title>
 		<link href="https://i.imgur.com/feyG8z6.png" rel="shortcut icon">
 		<meta charset="UTF-8">
 		<link href="https://fonts.googleapis.com/css?family=Cardo|PT+Sans+Caption|Spinnaker|Viga" rel="stylesheet">
